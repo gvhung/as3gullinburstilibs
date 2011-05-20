@@ -21,7 +21,12 @@
     <classEntry path="cc.gullinbursti.dataorgs.trees.BinaryTree"/>
     <classEntry path="cc.gullinbursti.dataorgs.trees.LeafVO"/>
     <classEntry path="cc.gullinbursti.converts.Troy"/>
+    <classEntry path="cc.gullinbursti.fx.BlurFX"/>
+    <classEntry path="cc.gullinbursti.fx.BriteContrastFX"/>
+    <classEntry path="cc.gullinbursti.fx.ColorSweeperFX"/>
+    <classEntry path="cc.gullinbursti.fx.FloppyJiggleFX"/>
     <classEntry path="cc.gullinbursti.fx.HueSaturateFX"/>
+    <classEntry path="cc.gullinbursti.fx.TintFX"/>
     <classEntry path="cc.gullinbursti.games.vo.SpriteVO"/>
     <classEntry path="cc.gullinbursti.iterators.RandIterator"/>
     <classEntry path="cc.gullinbursti.lang.Arrays"/>
@@ -30,8 +35,12 @@
     <classEntry path="cc.gullinbursti.lang.Booleans"/>
     <classEntry path="cc.gullinbursti.lang.ByteArrays"/>
     <classEntry path="cc.gullinbursti.lang.Chars"/>
+    <classEntry path="cc.gullinbursti.lang.Checksums"/>
+    <classEntry path="cc.gullinbursti.lang.ColorMatrixFilters"/>
     <classEntry path="cc.gullinbursti.lang.Colors"/>
+    <classEntry path="cc.gullinbursti.lang.ConvolutionFilters"/>
     <classEntry path="cc.gullinbursti.lang.DateTimes"/>
+    <classEntry path="cc.gullinbursti.lang.DisplacementMapFilters"/>
     <classEntry path="cc.gullinbursti.lang.Ints"/>
     <classEntry path="cc.gullinbursti.lang.Keys"/>
     <classEntry path="cc.gullinbursti.lang.Matrixs"/>
@@ -132,10 +141,6 @@
     <classEntry path="cc.gullinbursti.vo.AbstractUserInputVO"/>
     <classEntry path="cc.gullinbursti.vo.KeyboardVO"/>
     <classEntry path="cc.gullinbursti.vo.MouseVO"/>
-    <classEntry path="cc.gullinbursti.lang.ColorMatrixFilters"/>
-    <classEntry path="cc.gullinbursti.lang.ConvolutionFilters"/>
-    <classEntry path="cc.gullinbursti.lang.Checksums"/>
-    <classEntry path="cc.gullinbursti.lang.DisplacementMapFilters"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

@@ -34,6 +34,7 @@ package cc.gullinbursti.fx {
 		private var base_pt:Point;
 		private var str_pt:Point;
 		private var comp_pt:Point;
+		private var spdMult_pt:Point;
 		private var offsetPts_arr:Array;
 		private var offsetInc_arr:Array;
 		
@@ -46,15 +47,29 @@ package cc.gullinbursti.fx {
 		 * 
 		 **/
 		// <*] class constructor [*>
-		public function FloppyJiggleFX (w:int, h:int, oct:int=2, xBase:int=8, yBase:int=32, xStr:Number=2, yStr:Number=0.5, xMap:int=0, yMap:int=0, seed_max:int=2048) {
+		public function FloppyJiggleFX (dim:Point, oct:int=2, base:Point=null, str:Point=null, spdMult:Point=null, map:Point=null, seed_max:int=2048) {
 		//~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~~*~._
 			
-			size_pt = new Point(w, h);
+			if (!base)
+				base = new Point(8, 32);
+			
+			if (!str)
+				str = new Point(2, 0.5);
+			
+			if (!map)
+				map = new Point();
+			
+			if (!spdMult)
+				spdMult = new Point(1, 1);
+			
+			
+			size_pt = dim;
 			noise_oct = oct;
-			base_pt = new Point(xBase, yBase);
-			str_pt = new Point(xStr, yStr);
+			base_pt = base;
+			str_pt = str;
 			comp_pt = new Point(BitmapDataChannel.RED, BitmapDataChannel.GREEN);
-			map_pt = new Point(xMap, yMap);
+			map_pt = map;
+			spdMult_pt = spdMult;
 			noise_seed = Randomness.generateInt(0, seed_max);
 			
 			offsetPts_arr = new Array();
@@ -75,10 +90,10 @@ package cc.gullinbursti.fx {
 				offsetPts_arr.push(new Point());
 			
 			// populate the speed array
-            offsetInc_arr.push(new Point(0, -1));
-            offsetInc_arr.push(new Point(0, 1));
-            offsetInc_arr.push(new Point(0, -1));
-            offsetInc_arr.push(new Point(0, 1));
+            offsetInc_arr.push(new Point(spdMult_pt.x, -spdMult_pt.y));
+            offsetInc_arr.push(new Point(spdMult_pt.x, spdMult_pt.y));
+            offsetInc_arr.push(new Point(spdMult_pt.x, -spdMult_pt.y));
+            offsetInc_arr.push(new Point(spdMult_pt.x, spdMult_pt.y));
             
             // create the bitmap datas
             offset_bmp = new BitmapData(size_pt.x, size_pt.y);

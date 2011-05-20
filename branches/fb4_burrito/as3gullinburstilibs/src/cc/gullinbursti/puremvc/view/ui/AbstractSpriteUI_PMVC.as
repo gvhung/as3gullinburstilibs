@@ -14,6 +14,7 @@ package cc.gullinbursti.puremvc.view.ui {
 		
 		//] class properties ]>
 		//]=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~.
+		protected var _isAdopted:Boolean = false;
 		//]~=~=~=~=~=~=~=~=~=~=~=~=~=~[]~=~=~=~=~=~=~=~=~=~=~=~=~=~[
 
 		// <*] class constructor [*>
@@ -30,56 +31,58 @@ package cc.gullinbursti.puremvc.view.ui {
 		
 		public function onMediatorDrafted():void {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
-			trace ("  =[> AbstractSpriteUI_PMVC.onMediatorDrafted <]=");
+			//trace ("  =[> AbstractSpriteUI_PMVC.onMediatorDrafted <]=");
 			
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 		
 		
 		public function onMediatorRelieved():void {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
-			trace ("  =[> AbstractSpriteUI_PMVC.onMediatorRelieved <]=");
+			//trace ("  =[> AbstractSpriteUI_PMVC.onMediatorRelieved <]=");
 			
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 		
 		
 		public function onStageAdoption(stage_size:Point=null):void {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
-			trace ("  =[> AbstractSpriteUI_PMVC.onStageAdoption <]= ("+stage_size+")");
+			//trace ("  =[> AbstractSpriteUI_PMVC.onStageAdoption <]= ("+stage_size+")");
 			
+			_isAdopted = true;
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 		
 		
 		public function onStageOrphaned():void {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
-			trace ("  =[> AbstractSpriteUI_PMVC.onStageOrphaned <]=");
+			//trace ("  =[> AbstractSpriteUI_PMVC.onStageOrphaned <]=");
 			
+			_isAdopted = false
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 		
 		
 		public function onStageResized(stage_size:Point):void {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
-			trace ("  =[> AbstractSpriteUI_PMVC.onStageResized <]= ("+stage_size+")");
+			//trace ("  =[> AbstractSpriteUI_PMVC.onStageResized <]= ("+stage_size+")");
 			
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 		
 		
 		public function onEnterFrame():void {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
-			trace ("  =[> AbstractSpriteUI_PMVC.onEnterFrame <]=");
+			//trace ("  =[> AbstractSpriteUI_PMVC.onEnterFrame <]=");
 			
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 		
 		
 		protected function renderMe(stage_size:Point=null):void {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
-			trace ("  =[> AbstractSpriteUI_PMVC.renderMe <]= ("+stage_size+")");
+			//trace ("  =[> AbstractSpriteUI_PMVC.renderMe <]= ("+stage_size+")");
 			
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 		
 		
 		protected function scaffold(stage_size:Point=null):void {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
-			trace ("  =[> AbstractSpriteUI_PMVC.scaffold <]= ("+stage_size+")");
+			//trace ("  =[> AbstractSpriteUI_PMVC.scaffold <]= ("+stage_size+")");
 			
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 	}
