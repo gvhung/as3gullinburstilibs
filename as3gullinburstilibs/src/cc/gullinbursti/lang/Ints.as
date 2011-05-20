@@ -3,6 +3,7 @@ package cc.gullinbursti.lang {
 	//] includes [!]>
 	//]=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~.
 	import cc.gullinbursti.math.BasicMath;
+	import cc.gullinbursti.math.probility.Randomness;
 	
 	import flash.geom.Point;
 
@@ -290,6 +291,19 @@ package cc.gullinbursti.lang {
 			
 			// a point containing the swapped vals
 			return (new Point(val1, val2));
+		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
+		
+		
+		/**
+		 * Returns a random <code>int</code>w/in a range.
+		 * @param lower The bottom <code>int</code> in range.
+		 * @param upper The top <code>int</code> in range.
+		 * @return A randomized <code>int</code>.
+		 * 
+		 */		
+		public static function rand(lower:int, upper:int):int {
+		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._			
+			return (Randomness.generateInt(lower, upper));
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 	}
 }

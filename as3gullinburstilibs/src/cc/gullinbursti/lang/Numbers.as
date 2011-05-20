@@ -5,6 +5,7 @@ package cc.gullinbursti.lang {
 	import cc.gullinbursti.math.BasicMath;
 	import cc.gullinbursti.math.algebra.Fractions;
 	import cc.gullinbursti.math.discrete.Factorization;
+	import cc.gullinbursti.math.probility.Randomness;
 	
 	import flash.geom.Point;
 
@@ -392,6 +393,22 @@ package cc.gullinbursti.lang {
 				fract.x += chopDecimal(float) * fract.y;
 			
 			return (fract);
+		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
+		
+		
+		
+		
+		/**
+		 * Returns a random <code>Number</code>w/in a range.
+		 * @param lower The bottom <code>Number</code> in range.
+		 * @param upper The top <code>Number</code> in range.
+		 * @param precision The # of decimal vals.
+		 * @return A randomized <code>Number</code>.
+		 * 
+		 */		
+		public static function rand(lower:Number, upper:Number, precision:int=5):Number {
+		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._			
+			return (Randomness.generateFloat(lower, upper, precision));
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 	}
 }

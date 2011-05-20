@@ -364,7 +364,12 @@
       <class>cc.gullinbursti.dataorgs.trees.AbstractTree</class>
       <class>cc.gullinbursti.dataorgs.trees.BinaryTree</class>
       <class>cc.gullinbursti.dataorgs.trees.LeafVO</class>
+      <class>cc.gullinbursti.fx.BlurFX</class>
+      <class>cc.gullinbursti.fx.BriteContrastFX</class>
+      <class>cc.gullinbursti.fx.ColorSweeperFX</class>
+      <class>cc.gullinbursti.fx.FloppyJiggleFX</class>
       <class>cc.gullinbursti.fx.HueSaturateFX</class>
+      <class>cc.gullinbursti.fx.TintFX</class>
       <class>cc.gullinbursti.games.vo.SpriteVO</class>
       <class>cc.gullinbursti.iterators.RandIterator</class>
       <class>cc.gullinbursti.lang.Arrays</class>

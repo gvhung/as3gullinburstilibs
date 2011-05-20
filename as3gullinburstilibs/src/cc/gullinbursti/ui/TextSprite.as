@@ -41,13 +41,13 @@ package cc.gullinbursti.ui {
 		
 		
 		// <*] class constructor [*>
-		public function TextSprite(fontName:String, fontSize:uint, txtCopy:String, color:uint=0x000000, isBtn:Boolean=false, txtAlign:String=TextFormatAlign.CENTER) {
+		public function TextSprite(fontName:String, fontSize:uint, txtCopy:String, color:uint=0x000000, isBtn:Boolean=false, alignType:String=TextFormatAlign.CENTER) {
 		//]~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~~*~._
 		
 			super();
 			_autoSize = TextFieldAutoSize.LEFT;
 			
-			var txtFrmt_new:TextFormat = new TextFormat(fontName, fontSize, color, null, null, null, null, null, txtAlign);
+			var txtFrmt_new:TextFormat = new TextFormat(fontName, fontSize, color, null, null, null, null, null, alignType);
 			
 			
 			_txt = new TextField();
@@ -89,10 +89,11 @@ package cc.gullinbursti.ui {
 			//trace("NEW TXTSPRITE: _txt:["+pt+"] txtArea:["+_txtArea+"] calc:["+TextFields.getTextBounds(_txt)+"]");
 			
 			
-			if (txtAlign == TextFormatAlign.CENTER) {
+			if (alignType == TextFormatAlign.CENTER) {
 				_txt.x = -_txtArea.x / 2;
 				_txt.y = -_txtArea.y / 2;
 			}
+			
 			
 			var g:Graphics = this.graphics;
 			/*
@@ -205,8 +206,28 @@ package cc.gullinbursti.ui {
 				txtFrmt.underline = val;
 				
 			this.applyNewFormat(txtFrmt); */
-		
+			
+			
+			var pos:Point = new Point();
+			
 			_txt.defaultTextFormat.align = alignType;
+			_txt.y = -_txtArea.y * 0.5;
+			
+			switch (alignType) {
+				
+				case TextFormatAlign.CENTER:
+					_txt.x = -_txtArea.x * 0.5;
+					break;
+				
+				case TextFormatAlign.LEFT:
+					_txt.x = 0;
+					break;
+				
+				case TextFormatAlign.RIGHT:
+					_txt.x = 0;
+					break;
+			}
+			
 		}//]~*~~*~~*~~*~~*~~*~~*~~*~~·¯
 		
 		public function setTxtSize (val:int):void {
