@@ -1,0 +1,1 @@
+Contains math, science, & various other classes that are implemented in AS3 projects as helpers, utils, UI components, & template classes.
